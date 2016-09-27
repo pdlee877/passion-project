@@ -1,0 +1,47 @@
+<h1>Texas Tides and Currents </h1>
+
+<form id='location' action='/' method='POST'>
+  <input type='text' name='texaswater' placeholder='tide station'></br>
+  <input type='submit' value='Submit'>
+</form>
+
+<% if @tide %>
+    <p><%= @tide["Name"] %></p>
+    <ul>
+      <% @tide["Turns"][0].each do |item, value| %>
+        <li><%= "#{item} - #{value}" %></li>
+        <% end %>
+      </ul>
+<% end %>
+
+<table>
+  <tr>
+    <th>Location</th>
+    <th>Tide Station</th>
+  </tr>
+  <tr>
+    <th>San Luis Pass</th>
+    <th>1830</th>
+  </tr>
+  <tr>
+    <th>Freeport Harbor</th>
+    <th>1831</th>
+  </tr>
+  <tr>
+    <th>Clear Lake</th>
+    <th>1819</th>
+  </tr>
+  <tr>
+    <th>Galveston</th>
+    <th>1815</th>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
